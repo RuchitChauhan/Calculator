@@ -138,14 +138,3 @@ String expression;
             expression = expression + current.getText().toString();
         }
         txt.setText(expression);
-
-//just checking it works or not
-        btn0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-    }
-
-}
