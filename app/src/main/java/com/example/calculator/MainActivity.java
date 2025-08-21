@@ -19,9 +19,10 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 
 
 public class MainActivity extends AppCompatActivity {
-Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn0,divide,multiply,plus,minus,ac,delete,dot,bracket,percentage,equal;
-TextView txt;
-String expression;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, divide, multiply, plus, minus, ac, delete, dot, bracket, percentage, equal;
+    TextView txt;
+    String expression;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +34,9 @@ String expression;
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(expression==null){
+                if (expression == null) {
                     expression = "";
-                }
-                else {
+                } else {
                     expression = expression + "-";
                 }
                 txt.setText(expression);
@@ -47,10 +47,9 @@ String expression;
         divide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(expression==null){
+                if (expression == null) {
                     expression = "";
-                }
-                else {
+                } else {
                     expression = expression + "/";
                 }
                 txt.setText(expression);
@@ -96,13 +95,9 @@ String expression;
         });
 
 
-
-
-
-
-
     }
-    private void init(){
+
+    private void init() {
 
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
@@ -128,13 +123,15 @@ String expression;
     }
 
 
-    public void check(View v){
+    public void check(View v) {
 
-        Button current = (Button)v;
-        if(expression==null){
-            expression =  current.getText().toString();
-        }
-        else {
+        Button current = (Button) v;
+        if (expression == null) {
+            expression = current.getText().toString();
+        } else {
             expression = expression + current.getText().toString();
         }
         txt.setText(expression);
+    }
+
+}
